@@ -1,12 +1,118 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<link rel="titlu" href="titlu1.html">
-<frameset rows='30%,70%'>
-<frame name='titlu' src="titlu1.html">
-<frameset cols='20%,80%'>
-<frame name='meniu' src="meniu.html">
-<frame name='continut'>
-<frameset>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Club - Acasă</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://coltisorderomania.ro/wp-content/uploads/2020/05/golf6.png'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+        header {
+            background: rgba(0, 77, 64, 0.9);
+            color: white;
+            text-align: center;
+            padding: 2em;
+            font-size: 24px;
+        }
+        nav {
+            background: rgba(0, 121, 107, 0.9);
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav ul li a:hover {
+            color: #c8e6c9;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section-content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            background: rgba(0, 77, 64, 0.9);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            showSection('despre'); 
+        });
+    </script>
 </head>
+<body>
+    <header>
+        <h1>Jocul de golf</h1>
+    </header>
+    <nav>
+    <ul>
+        <li><a href="despre.html">Despre Golf</a></li>
+        <li><a href="tehnici.html">Tehnici și Sfaturi</a></li>
+        <li><a href="terenuri.html">Terenuri de Golf</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+    <main>
+        <section id="despre" class="section-content active">
+            <h2>Despre Golf</h2>
+            <p>Golf-ul este un sport elegant, jucat pe terenuri special amenajate. Se bazează pe tehnică, precizie și strategie.</p>
+            <h3>Istoria Golfului</h3>
+            <p>Originile golfului datează din secolul al XV-lea în Scoția. Jocul a evoluat și a devenit unul dintre cele mai populare sporturi din lume.</p>
+        </section>
+        <section id="tehnici" class="section-content">
+            <h2>Tehnici și Sfaturi</h2>
+            <p>Îmbunătățește-ți jocul cu sfaturi utile despre swing, putting și strategie.</p>
+        </section>
+        <section id="terenuri" class="section-content">
+            <h2>Terenuri de Golf</h2>
+            <p>Descoperă cele mai frumoase terenuri de golf din lume.</p>
+        </section>
+        <section id="contact" class="section-content">
+            <h2>Contact</h2>
+            <p>Pentru informații suplimentare, ne puteți contacta la adresa de email: <strong>info@golfclub.com</strong></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Golf Club. Toate drepturile rezervate.</p>
+    </footer>
+</body>
 </html>
